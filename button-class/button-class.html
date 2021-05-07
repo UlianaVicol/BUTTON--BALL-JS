@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Class Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="form">
+        <input type="text" placeholder="Some dummy input">
+        <div id="actions"></div>
+    </form>
+
+    <script>
+        class Button {
+            constructor(text, type, action) {
+                this.text = text
+                if (type == "success" || type == "warning" || type == "disabled" || type == "danger") {
+                    this.type = type
+                } else {
+                this.type = "default"
+                }
+                this.action = action  
+                }
+
+                render(parrent_id) {
+                    parrent_id.innerHTML += `
+                        <button class="${this.type}" onclick="${this.action}() ">${this.text}</button> ` 
+                    }
+                }
+
+                function okAction() {
+                    alert( "You've Accepted!!!") 
+                }
+                function cancelAction() {
+                    alert( "You've Canceled!!!") 
+                }
+                let okButton = new Button("OK", "success", "okAction")
+                let cancelButton = new Button("CANCEL", "danger", "cancelAction")
+
+                okButton.render(actions)
+                cancelButton.render(actions)
+
+    </script>
+</body>
+</html>

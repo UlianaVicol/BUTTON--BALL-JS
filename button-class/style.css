@@ -1,0 +1,48 @@
+html {
+	height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: 
+		linear-gradient(rgba(131, 131, 131, 0.6), rgba(202, 132, 230, 0.6));
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background-color: WhiteSmoke;
+    border: 1px solid #808080;
+    max-width: 400px;
+    margin: 110px auto 200px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+button,
+input {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 10px;
+}
+button.success {
+    background-color: DarkGreen;
+    color: white;
+}
+button.warning {
+    background-color: DarkOrange;
+    color: white;
+  }
+button.disabled {
+    background-color: DarkGrey;
+    color: rgb(10, 10, 10);
+  }
+button.danger {
+    background-color: Red;
+    color: white ;
+    margin-left: 1px; 
+}
+button.default {
+    background-color: white;
+    color: rgb(10, 10, 10);
+  }
